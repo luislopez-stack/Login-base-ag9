@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "loginbase"
+    }
+  },
+  "defaultProject": "loginbase",
+  "cli": {
+    "analytics": false
+  }
 }

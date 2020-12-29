@@ -1,0 +1,46 @@
+<div class="limiter animated fadeInRight">
+    <div class="container-login100">
+        <div class="wrap-login100 p-t-50 p-b-90">
+
+            <form class="login100-form-title p-b-51" #f="ngForm" (ngSubmit)="onSubmit( f )">
+                <samp class="login100-form-title p-b-51">
+                  Login
+                </samp>
+
+
+                <span *ngIf="f.submitted && f.controls['username'].errors" class="txt1 text-danger animated fadeIn">El correo es obligatorio</span>
+                <div class="wrap-input100 m-b-16">
+                    <input class="input100" name="username" type="email" placeholder="Email" required [(ngModel)]="usuario.email">
+                    <samp class="focus-input100"></samp>
+                </div>
+
+
+                <span *ngIf="f.submitted && f.controls['password'].errors" class="txt1 text-danger animated fadeIn">Password invalida</span>
+                <div class="wrap-input100 m-b-16" data-validate="Password is required">
+                    <input class="input100" type="password" name="password" placeholder="Password" required [(ngModel)]="usuario.password">
+                    <span class="focus-input100"></span>
+                </div>
+
+
+                <div class="flex-sb-m w-full p-t-3 p-b-24">
+                    <div class="contact100-form-checkbox">
+                        <input [(ngModel)]="recordarUs" type="checkbox" class="input-checkbox100" id="ckb1" name="remember-me">
+                        <label class="label-checkbox100" for="ckb1">Recordar usuario</label>
+                    </div>
+
+                    <div>
+                        <a routerLink="/registro" class="txt1">
+                        ¿No tienes cuenta?
+                      </a>
+                    </div>
+                </div>
+
+                <div class="container-login100-form-btn m-t-17">
+                    <button class="login100-form-btn" type="submit">Ingresar</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
